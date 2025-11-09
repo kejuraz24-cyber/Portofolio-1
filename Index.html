@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Arya Satiyaji</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      color-scheme: dark;
+      font-family: 'Inter', system-ui;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#08101a);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021028}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:28px;align-items:center}
+    .intro h1{font-size:28px;margin:0 0 8px}
+    .intro p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:10px}
+    .btn{padding:10px 16px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021028}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+    .project{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 8px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    .grid-3{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill{display:flex;justify-content:space-between;align-items:center}
+    .bar{height:8px;background:rgba(255,255,255,0.04);border-radius:999px;flex:1;margin-left:12px;overflow:hidden}
+    .bar div{height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+
+    footer{margin-top:40px;padding:18px 0;color:var(--muted);text-align:center}
+
+    @media (max-width:880px){
+      nav{display:none}
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <div class="brand">
+        <div class="logo">Arya</div>
+        <div>
+          <div style="font-weight:800">Arya Satiyaji</div>
+          <div style="font-size:13px;color:var(--muted)">Desainer & Pembuat karya</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- Seksi Tentang -->
+    <section id="about" class="card" style="margin-top:28px">
+      <h2>Tentang Saya</h2>
+      <p style="color:var(--muted)">Saya Arya Satiyaji, seorang pembuat karya visual digital dan manual. Saya menyukai seni, ilustrasi, dan eksperimen kreatif.</p>
+    </section>
+
+    <section class="hero">
+      <div class="intro card">
+        <h1>Halo — saya <span style="color:var(--accent)">Arya Satiyaji</span></h1>
+        <p>Saya membuat website yang menarik, untuk memberitahu informasi yang saya telah jalani selama ini</p>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="scrollToSection('projects')">Lihat Proyek</button>
+          <a class="btn btn-ghost" href="#contact">Hubungi</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="display:flex;gap:12px;align-items:center;padding:10px;min-width:120px">
+            <div style="font-weight:800">5+</div>
+            <div style="font-size:13px;color:var(--muted)">Tahun pengalaman</div>
+          </div>
+          <div class="card" style="display:flex;gap:12px;align-items:center;padding:10px;min-width:120px">
+            <div style="font-weight:800">10+</div>
+            <div style="font-size:13px;color:var(--muted)">Art</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Kontak cepat</h3>
+        <p style="color:var(--muted);margin-bottom:12px">
+          Email: <a href="mailto:kaijuroz3@gmail.com" style="color:var(--accent);text-decoration:none">kaijuroz3@gmail.com</a>
+        </p>
+        <p style="color:var(--muted);margin-bottom:6px">Lokasi: Jakarta, Indonesia</p>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <a class="tag" href="#">LinkedIn</a>
+          <a class="tag" href="#">GitHub</a>
+          <a class="tag" href="#">Behance</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="project">
+        <h3>Hasil Karya</h3>
+        <p style="color:var(--muted);margin:0 0 10px">Platform untuk menampilkan karya buatan Arya Satiyaji</p>
+        <div class="tags">
+          <span class="tag">Manual Draw</span>
+          <span class="tag">Editor</span>
+          <span class="tag">3D Model</span>
+          <span class="tag">Coloring</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>One Line Body</h3>
+        <img src="one_line_body.png" width="300" height="300" alt="Artwork One Line Body">
+      </div>
+
+      <div class="project">
+        <h3>Unknown Face</h3>
+        <img src="Unknown_face.png" width="300" height="300" alt="Artwork Unknown Face">
+      </div>
+
+      <div class="project">
+        <h3>Butterfly</h3>
+        <img src="butterfly.png" width="300" height="300" alt="Artwork Butterfly Illustration">
+      </div>
+    </section>
+
+    <section id="skills" class="grid-3">
+      <div class="card">
+        <h3 style="margin-top:0">Keahlian</h3>
+        <div class="skills">
+          <div class="skill"><strong>Coloring</strong><div class="bar"><div style="width:40%"></div></div></div>
+          <div class="skill"><strong>3D Model</strong><div class="bar"><div style="width:85%"></div></div></div>
+          <div class="skill"><strong>Editor</strong><div class="bar"><div style="width:80%"></div></div></div>
+          <div class="skill"><strong>Manual Draw</strong><div class="bar"><div style="width:78%"></div></div></div>
+        </div>
+      </div>
+
+      <div id="contact" class="card">
+        <h3 style="margin-top:0">Hubungi saya</h3>
+        <p style="color:var(--muted)">Isi form sederhana atau kirim email langsung.</p>
+        <form onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:10px">
+          <input type="text" id="name" placeholder="Nama" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <textarea id="message" rows="4" placeholder="Pesan" required></textarea>
+
+          <div style="display:flex;gap:8px">
+            <button type="submit" class="btn btn-primary">Kirim</button>
+            <button type="button" class="btn btn-ghost" onclick="location.href='mailto:kaijuroz3@gmail.com'">Email</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Arya Satiyaji — Dibuat dengan HTML/CSS
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !email || !message){
+        return alert('Mohon isi semua kolom');
+      }
+
+      const subject = encodeURIComponent('Pesan dari portofolio — '+name);
+      const body = encodeURIComponent('Nama: '+name+"\nEmail: "+email+"\n\n"+message);
+
+      window.location.href = `mailto:kaijuroz3@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
